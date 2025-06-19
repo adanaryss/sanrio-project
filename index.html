@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Melody & Cinnamoroll</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fce4ec, #fff1f9);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: #ff69b4;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px #fff;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: #d63384;
+      margin-bottom: 30px;
+    }
+
+    .characters {
+      display: flex;
+      gap: 40px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .characters img {
+      width: 240px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .characters img:hover {
+      transform: scale(1.05);
+    }
+
+    #messageBox {
+      margin-top: 30px;
+      padding: 15px 25px;
+      border-radius: 15px;
+      background-color: #ffd6e8;
+      color: #b03060;
+      font-size: 1.4rem;
+      max-width: 400px;
+      box-shadow: 0 3px 8px rgba(176, 48, 96, 0.4);
+      min-height: 60px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hi there! 💌</h1>
+  <p>How was your day?</p>
+
+  <div class="characters">
+    <img src="my-melody.png" alt="My Melody" id="myMelody" />
+    <img src="cinnamoroll.png" alt="Cinnamoroll" id="cinnamoroll" />
+  </div>
+
+  <div id="messageBox"></div>
+
+  <script>
+    const messageBox = document.getElementById('messageBox');
+
+    document.getElementById('myMelody').addEventListener('click', () => {
+      messageBox.textContent = "It's okay to cry sometimes. You're stronger than you think, and tomorrow will be better. 💖";
+      messageBox.style.backgroundColor = '#ffd6e8'; // soft pink
+      messageBox.style.color = '#b03060';
+    });
+
+    document.getElementById('cinnamoroll').addEventListener('click', () => {
+      messageBox.textContent = "Keep going! Every step you take brings you closer to your dreams. Believe in yourself! 🌟";
+      messageBox.style.backgroundColor = '#d0f0fd'; // soft blue
+      messageBox.style.color = '#007acc';
+    });
+  </script>
+</body>
+</html>
